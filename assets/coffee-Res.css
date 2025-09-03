@@ -51,7 +51,7 @@ body{
         font-size: 12px;
     }
     .image-product-height{
-        height: 110px;     
+        height: 100px;     
     }
     .price-product-button{
         font-size: small;
@@ -377,6 +377,12 @@ body{
 @media (min-width: 1200px) {
     .products_Basket .product{
         height: 70%;
+        width: 35%;
+    }
+}
+@media (max-width: 575.98px){
+    .products_Basket .product{
+        height: 50%;
         width: 35%;
     }
 }
