@@ -38,7 +38,7 @@ body{
 
     .heder-width{ 
         width: 100%;
-        height: 350px;
+        height: 280px;
     }
     .font-size-h2{
         color: #000;
@@ -87,7 +87,7 @@ body{
         font-size: 10px;
     }
     .image-product-height{
-        height: 140px;
+        height: 120px;
     }
     .price-product-button{
     font-size: larger;
@@ -124,7 +124,7 @@ body{
         font-size: 15px;
     }
     .image-product-height{
-        height: 200px;
+        height: 120px;
     }
     .price-product-button{
     font-size: larger;
@@ -253,6 +253,7 @@ body{
 }
 .icon-menu{
     color: #d07c08;
+    cursor: pointer;
 }
 .box-menu{
     display: none;
@@ -291,9 +292,10 @@ body{
     
 .shopping{
     position: relative;
-    font-size: 27px;
+    font-size: 26px;
     color: #d07c08;
     cursor: pointer;
+    margin-right: 0.5%;
 }
 .shopping::before{
     content: attr(data-count);
@@ -322,6 +324,63 @@ body{
     opacity: 1;
 
 }
+.Basket{
+    position: relative;
+    background:#fbe7cf;
+    background:#fbe7cf;
+
+    position: absolute;
+    top: 100px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 10px;
+    width: 80%;
+    height: 85%;
+    display: none;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: #1f1201 solid 6px;
+    overflow-x: auto;
+    z-index: 2;
+}
+
+.Basket.display{
+    display: flex;
+}
+.title_Basket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 5%;
+    color: #1f1201;
+    display: flex;
+    top: 0px;
+
+}
+.title_Basket h3{
+    color: #1f1201;
+
+}
+
+.products_Basket{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+}
+@media (min-width: 1200px) {
+    .products_Basket .product{
+        height: 70%;
+        width: 35%;
+    }
+}
+
 /* --------------------------------------------------------------- */
 /* row2 */
 .heder{
@@ -360,7 +419,7 @@ body{
 
     position: absolute;
     margin: auto;
-    top: 25%;
+    top: 20%;
     right: 13%;
     text-align: right;
 }
@@ -462,10 +521,11 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+;
     width: 25%;
     border-radius: 20px;
-    height: 100%;
-    margin: 10px;
+    height: 40%;
+    margin: 7px;
     text-decoration: none;
 
 }
@@ -500,7 +560,7 @@ body{
     align-items: center;
     justify-content: space-around;
     position: relative;
-    background-color: #000;
+    /* background-color: #000; */
 }
 .price-product p{
     color: #1f1201;
@@ -515,6 +575,13 @@ body{
     border-radius: 50%;
     background-color: #1f1201;
     color: #fbe7cf;
+}
+.price-product button.delete-button{
+    /* display: inline-block; 
+    transform: rotate(45deg); */
+    /* border:none; */
+    /* width: 30px; */
+    /* background-color: #ff0000; */
 }
 
 
