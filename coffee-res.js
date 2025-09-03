@@ -18,7 +18,9 @@ icon_Menu.addEventListener('click', (e)=>{
 // products_Basket--------------------------------
 const notification = document.querySelector('.shopping');
 const products_Basket = document.querySelector('.products_Basket');
-const button = document.querySelectorAll('.kart1 button');
+const Basket = document.querySelector('.Basket');
+
+const button = document.querySelectorAll('.price-product-button');
 
 for(but of button){
     but.addEventListener('click', (e)=>{
@@ -26,28 +28,37 @@ for(but of button){
         notification.setAttribute('data-count', add+1);
         notification.classList.add('zero')
 
+        e.preventDefault();   
+        e.stopPropagation();
+
         let parent = e.target.parentNode.parentNode;
         let clone = parent.cloneNode(true);
+
         products_Basket.appendChild(clone);
 
-        clone.lastElementChild.lastElementChild.innerText = 'delete';
+        clone.lastElementChild.lastElementChild.innerHTML = '<i class="fas fa-times"></i>';
+        clone.lastElementChild.lastElementChild.classList.add('delete-button')
         let delete_Products = clone.lastElementChild.lastElementChild
         delete_Products.addEventListener('click' , (f)=>{
 
+            
+            
             const add = Number(notification.getAttribute('data-count'));
             products_Basket.removeChild(clone);
-
+            
             notification.setAttribute('data-count', add-1);
             if(add == 1){
                 notification.classList.remove('zero')
-                products_Basket.classList.remove('display')
-
+                Basket.classList.remove('display')
+                
             }
+            f.preventDefault();   
+            f.stopPropagation();
         })
         
         if(clone){
             notification.onclick = ()=>{
-                products_Basket.classList.toggle('display')
+                Basket.classList.toggle('display')
             }
         }
         
