@@ -108,11 +108,34 @@ function slide(direction){
         
     }
     slider[index].classList.add('activ')
-    // console.log(index)
-
+    
 }
 function autoSlide(){
     slide('next');
 }
 
 let timer = setInterval( autoSlide,duration)
+
+
+
+// product-----------------
+const select_item = document.querySelector('.select-item').children
+const productS = document.querySelector('.productS').children
+console.log(productS)
+for(let i = 0; i < select_item.length ; i++){
+
+    select_item[i].onclick = (e)=>{
+
+        for(let j = 0 ; j < productS.length ; j++){    
+
+            productS[j].classList.remove('display2')
+        }
+        for(let j = 0 ; j < productS.length ; j++){    
+
+            select_item[j].classList.remove('activ2')
+        }
+
+        select_item[i].classList.add('activ2')
+        productS[i].classList.add('display2')
+    }
+}
