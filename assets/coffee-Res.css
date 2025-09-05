@@ -382,7 +382,7 @@ body{
 }
 @media (max-width: 575.98px){
     .products_Basket .product{
-        height: 50%;
+        height: 35%;
         width: 35%;
     }
 }
@@ -503,31 +503,49 @@ body{
     font-size: clamp(19px,2.5vh, 20px);
     border-bottom:solid 1px black ;
 }
-.about-product p{
-    margin-top: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 16px;
+.select-item{
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.select-item img{
+    border-radius: 23px;
+    margin: 5px;
+    width: 27%;
+    padding: 17px;
+    cursor: pointer;
+    color: #FFEDD8;
+    transition: all 0.3s ease-in;
+}
+.activ2{
+    background-color: #ffffff;
+
+}
+
 /* --------------------------------------------------------------- */
 /* row4 *//* row5 */
-.products{
+.productS{
+    min-height: 400px;
     width: 100%;
-    /* height: 10%; */
-    display: flex;
+    height: auto;
+}
+.products{
+    display: none;
+    width: 100%;
     align-items: center;
-    /* align-content: center; */
     justify-content: center;
     flex-wrap: wrap;
-    /* background-color: #ff0000; */
+}
+.products.display2{
+    display: flex;
 }
 .product{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
-;
+    background-color: #ffffff;;
     width: 25%;
     border-radius: 20px;
     height: 40%;
@@ -538,11 +556,13 @@ body{
 .img-product{
     width: 50%;
     height: 100%;
+
 }
 .img-product img{
     width: 100%;
     /* height: 140px; */
     object-fit: cover;
+
 }
 .title-product{
     width: 100%;
@@ -581,13 +601,6 @@ body{
     border-radius: 50%;
     background-color: #1f1201;
     color: #fbe7cf;
-}
-.price-product button.delete-button{
-    /* display: inline-block; 
-    transform: rotate(45deg); */
-    /* border:none; */
-    /* width: 30px; */
-    /* background-color: #ff0000; */
 }
 
 
